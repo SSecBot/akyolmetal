@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Hanken+Grotesk:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-comfortaa: 'Comfortaa', cursive, sans-serif;
+  --font-hanken: 'Hanken Grotesk', 'Helvetica Now', 'Helvetica', 'Arial', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #F8FAF8;
+  color: #191C1B;
+}
+
+body {
+  font-family: var(--font-hanken), 'Helvetica Now', 'Helvetica', Arial, sans-serif;
+  background-color: #F8FAF8;
+  color: #191C1B;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6, .font-headline {
+  font-family: var(--font-comfortaa), 'Comfortaa', cursive, sans-serif;
+  letter-spacing: -0.015em;
+}
+
+/* Custom delicate light scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8FAF8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #A7F3D0;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0D631B;
+}
+
+/* Subtle organic background pattern parsed from DESIGN.md */
+.bg-pattern {
+  background-image: radial-gradient(#91F78E 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
+}
+
+/* Glassmorphic light accents */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(167, 243, 208, 0.5);
+}
+
+.glass-card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px -8px rgba(13, 99, 27, 0.14);
+  border-color: #91F78E;
+}
